@@ -20,13 +20,18 @@ if (class_exists('CSF')) {
             array(
                 'id' => 'carousel',
                 'type' => 'repeater',
-                'title' => '轮博',
+                'title' => '轮播',
                 'fields' => array(
                     array(
                         'id' => 'img',
                         'type' => 'media',
                         'title' => '背景图'
                     ),
+                    array(
+                        'id' => 'href',
+                        'type' => 'text',
+                        'title' => '链接'
+                    )
                 ),
             ),
             array(
@@ -108,7 +113,7 @@ if (class_exists('CSF')) {
     ));
 
     CSF::createSection($prefix, array(
-        'title' => '标准认证',
+        'title' => '标准认证-个人认证',
         'fields' => array(
             array(
                 'id' => 'product_personal',
@@ -132,7 +137,8 @@ if (class_exists('CSF')) {
                         'placeholder' => '选择模板',
                         'options' => array(
                             'id_verify' => '身份证实名身份证',
-                            'bank_verify' => '银行卡三/四要素认证',
+                            'bank_verify-0' => '银行卡三要素认证',
+                            'bank_verify-1' => '银行卡四要素认证',
                             'operate_verify' => '运营商三要素认证',
                             'face_verify' => '人脸实名认证',
                         ),
@@ -151,140 +157,12 @@ if (class_exists('CSF')) {
                             array(
                                 'id' => 'img',
                                 'type' => 'media',
+                                'title' => '背景'
                             ),
-                        ),
-                    ),
-                ),
-            ),
-
-            array(
-                'id' => 'product_company',
-                'type' => 'repeater',
-                'title' => '企业认证',
-                'fields' => array(
-                    array(
-                        'id' => 'title',
-                        'type' => 'text',
-                        'title' => '标题'
-                    ),
-                    array(
-                        'id' => 'desc',
-                        'type' => 'text',
-                        'title' => '描述'
-                    ),
-                    array(
-                        'id' => 'template',
-                        'type' => 'select',
-                        'title' => '选择模板',
-                        'placeholder' => '选择模板',
-                        'options' => array(
-                            'company_total_verify' => '企业公户认证',
-                            'company_legal_verify' => '企业法人要素认证',
-                            'company_bill_verify' => '增值税发票核验',
-                        ),
-                        'default' => 'company_total_verify'
-                    ),
-                    array(
-                        'id' => 'logo',
-                        'type' => 'media',
-                        'title' => '图标'
-                    ),
-                    array(
-                        'id' => 'app',
-                        'type' => 'repeater',
-                        'title' => '应用场景',
-                        'fields' => array(
                             array(
-                                'id' => 'img',
-                                'type' => 'media',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-
-            array(
-                'id' => 'product_ocr',
-                'type' => 'repeater',
-                'title' => 'OCR双引擎',
-                'fields' => array(
-                    array(
-                        'id' => 'title',
-                        'type' => 'text',
-                        'title' => '标题'
-                    ),
-                    array(
-                        'id' => 'desc',
-                        'type' => 'text',
-                        'title' => '描述'
-                    ),
-                    array(
-                        'id' => 'template',
-                        'type' => 'select',
-                        'title' => '选择模板',
-                        'placeholder' => '选择模板',
-                        'options' => array(
-                            'ocr_verify' => 'OCR双引擎',
-                        ),
-                        'default' => 'ocr_verify'
-                    ),
-                    array(
-                        'id' => 'logo',
-                        'type' => 'media',
-                        'title' => '图标'
-                    ),
-                    array(
-                        'id' => 'app',
-                        'type' => 'repeater',
-                        'title' => '应用场景',
-                        'fields' => array(
-                            array(
-                                'id' => 'img',
-                                'type' => 'media',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-
-            array(
-                'id' => 'product_msg',
-                'type' => 'repeater',
-                'title' => '短信服务',
-                'fields' => array(
-                    array(
-                        'id' => 'title',
-                        'type' => 'text',
-                        'title' => '标题'
-                    ),
-                    array(
-                        'id' => 'desc',
-                        'type' => 'text',
-                        'title' => '描述'
-                    ),
-                    array(
-                        'id' => 'template',
-                        'type' => 'select',
-                        'title' => '选择模板',
-                        'placeholder' => '选择模板',
-                        'options' => array(
-                            'msg_verify' => '短信服务',
-                        ),
-                        'default' => 'msg_verify'
-                    ),
-                    array(
-                        'id' => 'logo',
-                        'type' => 'media',
-                        'title' => '图标'
-                    ),
-                    array(
-                        'id' => 'app',
-                        'type' => 'repeater',
-                        'title' => '应用场景',
-                        'fields' => array(
-                            array(
-                                'id' => 'img',
-                                'type' => 'media',
+                                'id' => 'desc',
+                                'type' => 'text',
+                                'title' => '描述'
                             ),
                         ),
                     ),
@@ -294,6 +172,166 @@ if (class_exists('CSF')) {
     ));
 
     CSF::createSection($prefix, array(
+            'title' => '标准认证-企业认证',
+            'fields' => array(
+                array(
+                    'id' => 'product_company',
+                    'type' => 'repeater',
+                    'title' => '企业认证',
+                    'fields' => array(
+                        array(
+                            'id' => 'title',
+                            'type' => 'text',
+                            'title' => '标题'
+                        ),
+                        array(
+                            'id' => 'desc',
+                            'type' => 'text',
+                            'title' => '描述'
+                        ),
+                        array(
+                            'id' => 'template',
+                            'type' => 'select',
+                            'title' => '选择模板',
+                            'placeholder' => '选择模板',
+                            'options' => array(
+                                'company_total_verify-0' => '企业公户验证',
+                                'company_total_verify-1' => '企业打款验证',
+                                'company_legal_verify-0' => '企业法人三要素认证',
+                                'company_legal_verify-1' => '企业法人四要素认证',
+                                'company_legal_verify-2' => '企业信息查询',
+                                'company_bill_verify' => '增值税发票核验',
+                            ),
+                            'default' => 'company_total_verify'
+                        ),
+                        array(
+                            'id' => 'logo',
+                            'type' => 'media',
+                            'title' => '图标'
+                        ),
+                        array(
+                            'id' => 'app',
+                            'type' => 'repeater',
+                            'title' => '应用场景',
+                            'fields' => array(
+                                array(
+                                    'id' => 'img',
+                                    'type' => 'media',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        )
+    );
+
+    CSF::createSection($prefix, array(
+            'title' => '标准认证-OCR',
+            'fields' => array(
+                array(
+                    'id' => 'product_ocr',
+                    'type' => 'repeater',
+                    'title' => 'OCR双引擎',
+                    'fields' => array(
+                        array(
+                            'id' => 'title',
+                            'type' => 'text',
+                            'title' => '标题'
+                        ),
+                        array(
+                            'id' => 'desc',
+                            'type' => 'text',
+                            'title' => '描述'
+                        ),
+                        array(
+                            'id' => 'template',
+                            'type' => 'select',
+                            'title' => '选择模板',
+                            'placeholder' => '选择模板',
+                            'options' => array(
+                                'ocr_verify-0' => '身份证OCR',
+                                'ocr_verify-1' => '银行卡OCR',
+                                'ocr_verify-2' => '营业执照OCR',
+                                'ocr_verify-3' => '增值税发票OCR',
+                                'ocr_verify-4' => '开放许可证OCR',
+                            ),
+                            'default' => 'ocr_verify'
+                        ),
+                        array(
+                            'id' => 'logo',
+                            'type' => 'media',
+                            'title' => '图标'
+                        ),
+                        array(
+                            'id' => 'app',
+                            'type' => 'repeater',
+                            'title' => '应用场景',
+                            'fields' => array(
+                                array(
+                                    'id' => 'img',
+                                    'type' => 'media',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        )
+    );
+
+    CSF::createSection($prefix, array(
+            'title' => '标准认证-短信',
+            'fields' => array(
+                array(
+                    'id' => 'product_msg',
+                    'type' => 'repeater',
+                    'title' => '短信服务',
+                    'fields' => array(
+                        array(
+                            'id' => 'title',
+                            'type' => 'text',
+                            'title' => '标题'
+                        ),
+                        array(
+                            'id' => 'desc',
+                            'type' => 'text',
+                            'title' => '描述'
+                        ),
+                        array(
+                            'id' => 'template',
+                            'type' => 'select',
+                            'title' => '选择模板',
+                            'placeholder' => '选择模板',
+                            'options' => array(
+                                'msg_verify-0' => '短信验证码',
+                                'msg_verify-1' => '短信通知',
+                            ),
+                            'default' => 'msg_verify'
+                        ),
+                        array(
+                            'id' => 'logo',
+                            'type' => 'media',
+                            'title' => '图标'
+                        ),
+                        array(
+                            'id' => 'app',
+                            'type' => 'repeater',
+                            'title' => '应用场景',
+                            'fields' => array(
+                                array(
+                                    'id' => 'img',
+                                    'type' => 'media',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            )
+        )
+    );
+
+    CSF::createSection($prefix, array(
         'title' => '备份',
         'fields' => array(
             array(
@@ -301,7 +339,6 @@ if (class_exists('CSF')) {
                 'type' => 'backup',
                 'title' => '备份',
             ),
-
         )
     ));
 

@@ -55,7 +55,7 @@
   .tab-pane {
     padding: 10px 30px 0 !important;
     max-height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 
@@ -114,6 +114,50 @@
     position: relative;
     height: 0;
     padding-top: 100%;
+    cursor: pointer;
+
+    img {
+      border-radius: 8px;
+    }
+
+    &:hover {
+      color: #fff;
+
+      .service-app-desc {
+        background: rgba(16, 118, 254, .7);
+
+        &:after {
+          background: rgba(16, 118, 254, .2);
+        }
+      }
+    }
+
+    .service-app-desc {
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, .6);
+      border-radius: 120px;
+      text-align: center;
+      line-height: 120px;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+
+      &:after {
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, .2);
+        content: '';
+        display: block;
+        border-radius: 140px;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+      }
+    }
   }
 }
 
@@ -237,6 +281,8 @@
 }
 
 .service-features {
+  width: 720px;
+
   div {
     padding-left: 18px;
     position: relative;

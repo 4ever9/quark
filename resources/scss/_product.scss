@@ -16,6 +16,16 @@
   border: 1px solid #EDEDED;
   padding: 18px 25px 18px;
   margin-bottom: 20px;
+  cursor: pointer;
+
+
+  &:hover {
+    border: 1px solid #1076fe;
+
+    a {
+      color: #1076fe !important;
+    }
+  }
 }
 
 .product-item-card-title {
@@ -32,5 +42,7 @@
 .product-item-card-desc {
   color: #8c8c8c;
   font-size: 14px;
+  height: 42px;
+  overflow: hidden;
   margin-bottom: 20px;
 }
