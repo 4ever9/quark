@@ -1,0 +1,163 @@
+
+.app-item-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: #2A3135;
+  margin-top: 28px;
+}
+
+.app-item-desc {
+  font-size: 19px;
+  color: #333333;
+  margin-bottom: 38px;
+}
+
+.app-item-sub-desc {
+  color: #666666;
+  font-size: 16px;
+}
+
+.tab {
+  font-size: 18px;
+  color: #484848;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #fff;
+  border-radius: 100px !important;
+  padding: 2px 18px !important;
+  background: linear-gradient(to right, #FD7948, #F85568);;
+  border: none !important;
+}
+
+
+.index-product {
+  position: relative;
+  padding: 50px 40px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 8px;
+  z-index: 1;
+  display: flex;
+  height: 350px;
+
+  &::before {
+    border-radius: 8px;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.2s linear;
+    background: linear-gradient(to bottom, rgb(149, 220, 250), rgb(56, 119, 245));
+    opacity: 0;
+  }
+
+
+  .index-product-btn {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .2s;
+
+    .index-product-btn-wrap {
+      width: 240px;
+      background: #fff;
+      border-radius: 50px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      a, span {
+        width: 220px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1076FE;
+        border-radius: 50px;
+        color: #fff;
+      }
+    }
+  }
+
+  &.active, &:hover {
+    color: #fff;
+
+    &::before {
+      opacity: 1;
+    }
+
+    .index-product-btn {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .index-product-normal-img, .index-product-active-img {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.index-product-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  & img {
+    margin-right: 10px;
+    width: 16px;
+    height: 5px;
+  }
+}
+
+
+#contact-modal {
+  align-items: center;
+
+  .modal-dialog {
+    display: flex;
+    width: 880px;
+    background: #fff;
+    max-width: 880px;
+    min-height: 420px;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 420px;
+    height: 420px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+}

@@ -1,0 +1,96 @@
+.about-banner {
+  background-size: cover;
+}
+
+.banner {
+  background-size: cover;
+}
+
+.about-title {
+  color: #fff;
+}
+
+.about-map {
+  background-size: 68%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.about-card-border {
+  border-radius: 10px;
+  border: 1px solid #E6E6E6;
+  padding: 20px 20px 20px 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.about-desc {
+  line-height: 28px;
+}
+
+.about-credentials {
+  display: flex;
+  align-items: center;
+}
+
+.about-credential {
+  width: 260px;
+  height: 280px;
+  padding: 0 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.about-credential:hover .about-credential-cover {
+  display: flex;
+}
+
+.about-credential-cover {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  right: 45px;
+  bottom: 20px;
+  background: #1076feab;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-credential > img {
+  width: 100%;
+}
+
+.about-price {
+  height: 515px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 170px;
+  padding: 107px 0;
+}
+
+.about-price-item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-people {
+  padding: 60px 0;
+}
+
+.about-price-item-title-en {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 24px;
+  display: flex;
+}

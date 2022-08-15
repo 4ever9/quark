@@ -1,0 +1,343 @@
+@import "header";
+@import "product";
+@import "docs";
+@import "index";
+@import "price";
+@import "post";
+@import "footer";
+@import "about";
+@import "integration";
+@import "join";
+@import "service";
+@import "sidebar";
+
+/*
+Theme Name: Idem
+Theme URI: https://wordpress.org/themes/twentytwentytwo/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Full Site Editing features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Requires at least: 5.9
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentytwo
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+Twenty Twenty-Two WordPress Theme, (C) 2021 WordPress.org
+Twenty Twenty-Two is distributed under the terms of the GNU GPL.
+*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn-login {
+  font-size: 14px;
+  color: #0F1119;
+  text-decoration: none;
+}
+
+.login-divider {
+  width: 1px;
+  height: 20px;
+  background: #EDEDED;
+}
+
+.idem-btn {
+  border-radius: 100px !important;
+  padding: 0 18px !important;
+  font-size: 13px !important;
+  background: linear-gradient(to right, #FD7948, #F85568);
+  border: none !important;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+#indexIndicators img {
+  height: 560px !important;
+  object-fit: cover;
+}
+
+.partner {
+  border: 1px solid #f0f0f0;
+  padding: 30px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.partner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.two-line {
+  flex: 1;
+  border-top: 1px dashed #d0d0d0;
+  height: 8px;
+  border-bottom: 1px dashed #d0d0d0;
+}
+
+.carousel-indicators {
+  bottom: 80px !important;
+  margin: 0 8% !important;
+  justify-content: flex-start !important;
+}
+
+.carousel-indicators button {
+  background-color: rgb(195, 216, 248) !important;
+  width: 25px !important;
+  height: 4px !important;
+  border-radius: 2px;
+}
+
+.carousel-indicators button.active {
+  background-color: #1076FE !important;
+}
+
+.carousel-caption {
+  top: 133px !important;
+  left: 8% !important;
+  right: 0 !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.carousel-caption-title {
+  font-size: 40px;
+  color: #1076FE;
+  width: 354px;
+}
+
+.carousel-caption-desc {
+  width: 391px;
+  color: #666;
+  font-size: 14px;
+}
+
+.why-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.why-divider {
+  display: block;
+  height: 7px;
+  width: 53px;
+  margin: 35px 0;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.why-item img {
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin-right: 16px;
+}
+
+/* how */
+.one-line {
+  height: 2px;
+  flex: 1;
+  background: #fff;
+}
+
+.how-title {
+  font-size: 30px;
+  color: #2A3135;
+}
+
+.how-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.how-card:hover .more {
+  color: #1076FE;
+}
+
+.how-card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.how-card-desc {
+  font-size: 16px;
+  color: #666;
+}
+
+.footer {
+  padding: 70px 0 40px;
+}
+
+.logo-title {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.footer-meta img {
+  margin-right: 5px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #666;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.hr {
+  height: 1px;
+  background: #ededed;
+}
+
+.bookmark a {
+  color: #666;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.bookmark a:hover {
+  color: #1076FE;
+}
+
+/* common */
+.idem-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.idem-sub-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.color-white {
+  color: #fff !important;
+}
+
+.idem-desc {
+  color: #333;
+  font-size: 16px;
+}
+
+.idem-color {
+  color: #1076FE;
+}
+
+.mb-12 {
+  margin-bottom: 60px;
+}
+
+.my-12 {
+  margin: 60px 0 60px;
+}
+
+.page-title {
+  font-size: 48px;
+  color: #2D4882;
+  font-weight: bold;
+}
+
+.page-desc {
+  color: #1C426F;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-btn {
+  display: flex;
+  width: 600px;
+
+  input {
+    width: 400px;
+    height: 70px;
+    border-radius: 50px 0 0 50px;
+    border: none;
+    padding-left: 30px;
+  }
+
+  button {
+    width: 200px;
+    height: 70px;
+    background: linear-gradient(to right, #FD7948, #F85568);
+    border-radius: 0 50px 50px 0;
+    color: #fff !important;
+    border: none !important;
+    font-size: 20px;
+    font-weight: bold;
+
+    &:hover {
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+.mb-6 {
+  margin-bottom: 30px;
+}
+
+.idem-sub-desc {
+  font-size: 16px;
+  color: #666;
+}
+
+.mx-12 {
+  margin: 0 60px;
+}
+
+.how-link {
+  display: block;
+  color: #000;
+  cursor: pointer;
+}
+
+.center-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
